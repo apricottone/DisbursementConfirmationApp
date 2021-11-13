@@ -13,6 +13,7 @@
 		6C6C25D3274013F7006C1207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C6C25D1274013F7006C1207 /* Main.storyboard */; };
 		6C6C25D5274013FF006C1207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C6C25D4274013FF006C1207 /* Assets.xcassets */; };
 		6C6C25D8274013FF006C1207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C6C25D6274013FF006C1207 /* LaunchScreen.storyboard */; };
+		6C6C25E227402DD4006C1207 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6C25E127402DD4006C1207 /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6C6C25D4274013FF006C1207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C6C25D7274013FF006C1207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C6C25D9274013FF006C1207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C6C25E127402DD4006C1207 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6C6C25D4274013FF006C1207 /* Assets.xcassets */,
 				6C6C25D6274013FF006C1207 /* LaunchScreen.storyboard */,
 				6C6C25D9274013FF006C1207 /* Info.plist */,
+				6C6C25E127402DD4006C1207 /* ConfirmationViewController.swift */,
 			);
 			path = DisbursementConfirmationApp;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				6C6C25D0274013F7006C1207 /* ViewController.swift in Sources */,
 				6C6C25CC274013F7006C1207 /* AppDelegate.swift in Sources */,
+				6C6C25E227402DD4006C1207 /* ConfirmationViewController.swift in Sources */,
 				6C6C25CE274013F7006C1207 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
