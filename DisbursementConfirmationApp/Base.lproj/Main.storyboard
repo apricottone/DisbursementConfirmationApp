@@ -23,27 +23,38 @@
                                     <segue destination="DnM-0a-8Rr" kind="embed" id="skW-FV-snQ"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHE-CG-y1f">
-                                <rect key="frame" x="326" y="771" width="56" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.57097592399999997" green="0.5275825247" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHE-CG-y1f">
+                                <rect key="frame" x="319" y="767" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.34794303170000002" blue="0.39056268370000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="CYu-Ka-Kqg"/>
+                                    <constraint firstAttribute="height" constant="60" id="qo2-kB-SlZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <segue destination="POf-xA-TJF" kind="presentation" id="17n-zV-iI5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u18-UK-t0M" secondAttribute="trailing" id="Kyw-uS-PXJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NHE-CG-y1f" secondAttribute="bottom" constant="35" id="WfL-OV-flR"/>
                             <constraint firstItem="u18-UK-t0M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iP5-gu-5xf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NHE-CG-y1f" secondAttribute="trailing" constant="35" id="nPx-aV-2ym"/>
                             <constraint firstItem="u18-UK-t0M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t32-2k-7t3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u18-UK-t0M" secondAttribute="bottom" id="zZh-Dk-YTA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lb1-uX-5n1"/>
+                    <connections>
+                        <outlet property="addButton" destination="NHE-CG-y1f" id="sEx-gk-j2d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +98,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGb-cw-Ne6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386" y="82"/>
+            <point key="canvasLocation" x="2433" y="-179"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="bdW-bM-UIA">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="POf-xA-TJF" customClass="AddViewController" customModule="DisbursementConfirmationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="77Y-lD-FE5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="2Du-Dk-Iae">
+                                <rect key="frame" x="0.0" y="124" width="414" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsE-62-2hq">
+                                <rect key="frame" x="319" y="767" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.34794303170000002" blue="0.39056268370000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ab2-ny-cF5"/>
+                                    <constraint firstAttribute="height" constant="60" id="o2z-U7-YTj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeAction:" destination="POf-xA-TJF" eventType="touchUpInside" id="ELJ-7e-r7h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ddw-HR-wPl"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ddw-HR-wPl" firstAttribute="bottom" secondItem="LsE-62-2hq" secondAttribute="bottom" constant="35" id="3BG-Ac-J02"/>
+                            <constraint firstItem="2Du-Dk-Iae" firstAttribute="trailing" secondItem="ddw-HR-wPl" secondAttribute="trailing" id="4cw-Ja-vB6"/>
+                            <constraint firstItem="ddw-HR-wPl" firstAttribute="trailing" secondItem="LsE-62-2hq" secondAttribute="trailing" constant="35" id="TSW-ny-nBG"/>
+                            <constraint firstItem="2Du-Dk-Iae" firstAttribute="top" secondItem="ddw-HR-wPl" secondAttribute="top" constant="80" id="UA2-fG-jak"/>
+                            <constraint firstItem="2Du-Dk-Iae" firstAttribute="leading" secondItem="ddw-HR-wPl" secondAttribute="leading" id="oFx-Dd-Jkc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ace-2z-evD"/>
+                    <connections>
+                        <outlet property="closeButton" destination="LsE-62-2hq" id="p6A-1f-Ov9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCQ-7Z-N8B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2778" y="548"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ep1-i8-poQ">
@@ -110,6 +167,7 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
