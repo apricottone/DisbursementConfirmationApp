@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // addButton
         addButton.layer.cornerRadius = 60 / 2
+        addButton.backgroundColor = .systemPink
+        // NavigationBar
+        navigationItem.title = "Disbursement Confirmation App"
+        navigationController!.navigationBar.barTintColor = .systemPink
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -20,7 +20,7 @@ class ConfirmationViewController: UIViewController {
 
 extension ConfirmationViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 50
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,7 +30,7 @@ extension ConfirmationViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
-        cell.backgroundColor = .systemPink
+//        cell.backgroundColor = .systemGray
         return cell
     }
     
