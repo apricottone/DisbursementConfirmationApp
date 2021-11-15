@@ -9,8 +9,9 @@ import UIKit
 import BubbleTransition
 
 class ViewController: UIViewController {
-    let transition = BubbleTransition()
     @IBOutlet weak var addButton: UIButton!
+    
+    let transition = BubbleTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
         addButton.backgroundColor = .systemPink
         // NavigationBar
         navigationItem.title = "Disbursement Confirmation App"
+        navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController!.navigationBar.barTintColor = .systemPink
     }
     
@@ -27,7 +29,7 @@ class ViewController: UIViewController {
         controller.transitioningDelegate = self
         controller.modalPresentationStyle = .custom
     }
-
+    
 }
 
 // addButton animation
@@ -44,3 +46,4 @@ extension ViewController : UIViewControllerTransitioningDelegate {
         return transition
     }
 }
+

@@ -7,4 +7,6 @@ target 'DisbursementConfirmationApp' do
 
   # Pods for DisbursementConfirmationApp
   pod 'BubbleTransition', '~> 3.2.0'
+  pod 'RealmSwift', '~>10'
+  pod 'PKHUD', '~> 5.0'
 end
